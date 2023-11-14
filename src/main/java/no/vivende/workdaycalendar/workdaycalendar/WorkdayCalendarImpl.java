@@ -17,14 +17,6 @@ public class WorkdayCalendarImpl implements WorkdayCalendar {
         holidays = new ArrayList<>();
         recurringHolidays = new ArrayList<>();
 
-        setRecurringHoliday(new GregorianCalendar(2023, Calendar.MAY, 17));
-        setHoliday(new GregorianCalendar(2023, Calendar.MAY, 27));
-
-        setWorkdayStartAndStop(
-            new GregorianCalendar(2023, Calendar.JANUARY, 1, 8, 0),
-            new GregorianCalendar(2023, Calendar.JANUARY, 1, 16, 0)
-        );
-
         System.out.println("init workday calendar");
 
     }
