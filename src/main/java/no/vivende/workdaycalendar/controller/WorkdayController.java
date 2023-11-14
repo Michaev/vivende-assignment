@@ -18,10 +18,12 @@ public class WorkdayController {
     @GetMapping("/workday")
     public Date getSortedAds(@RequestParam @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss") Date inputDate, @RequestParam float increment) {
 
-        return workdayCalendarImpl.getWorkdayIncrement(
-            inputDate,
-            increment
+        Date endDate = workdayCalendarImpl.getWorkdayIncrement(
+                inputDate,
+                increment
         );
+
+        return endDate;
     }
 
 }
